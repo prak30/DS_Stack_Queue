@@ -16,13 +16,22 @@ public class StackQueue {
 			tempNode.next = tail;
 		}
 	}
+	
+	 public void deQueue() {
+	        Node temp =top;
+	        while (temp != null){
+	            Node tempNode = this.head;
+	            this.head = tempNode.next;
+	            temp=temp.next;
+	        }
+	 }
 
 	public void display() {
 		if (head == null) {
-			System.out.println("\nStack list is Empty");
+			System.out.println("Stack list is Empty");
 			return;
 		} else {
-			System.out.print("\n The stack elements are ");
+			System.out.print("The stack elements are ");
 			Node tempNode = head;
 			while (tempNode != null) {
 				if (tempNode.next != null) {
